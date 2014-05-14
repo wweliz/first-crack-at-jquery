@@ -1,3 +1,5 @@
+'use strict';
+
 //on click, appends the time div tag to display timevalue
 $('.b1').click(function() {
 	$('.time').html(new Date($.now()));
@@ -52,5 +54,19 @@ $('.b11').click(function() {
 });
 
 $('.b12').click(function() {
-	$('.aBt12')/*.delay(10000000)*/.css( 'color', '#ab0000' );
+	$('.aBt12').slideUp(300).slideDown(300).delay(800).fadeOut(400);
 });
+
+$('.b13').click(function() {
+		$('.forMouse').on('mousemove', function() { $('.forMouse').text('Your mouse has entered the box.').css('color', '#ab0000');
+		});
+});
+
+function getHeight(element, height) {
+  $('aBt14').text('The height for the ' + element + ' is ' + height + 'px.');
+}
+
+$('.b14').click(function () {
+	$('aBt14')getHeight().text('this box', $('.actionBox').height() );
+});
+
